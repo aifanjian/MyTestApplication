@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/iv_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_circle"
+            />
+
+        <com.example.lijian.myapplication.custom.PropertyTextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="187654.32"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="数字动画"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="颜色动画"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="数字颜色动画"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="左右移动动画"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="背景颜色动画"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="小球落体动画"
+            android:textSize="16sp"/>
+
+        <com.example.lijian.myapplication.custom.AddWidthPropertyButton
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="宽度变化动画"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/refresh_green"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/iv_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/refresh_blue"
+        android:layout_gravity="center_horizontal|bottom"
+        android:visibility="gone"
+        />
+</FrameLayout>
