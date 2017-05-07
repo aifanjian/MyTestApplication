@@ -3,4 +3,6 @@
     <string name="test_jni">JNI调用测试</string>
     <string name="addDownload">添加下载任务</string>
     <string name="deleteDownload">清除下载文件</string>
+    <string name="permissionTest">权限测试</string>
+    <string name="startAnimation">点击开始动画</string>
 </resources>

@@ -68,6 +68,17 @@ public class CircleProgress extends View {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         Log.e("TEST", "onSizeChanged()..........................");
+        mOuterRadius = Math.min(getWidth(), getHeight()) / 2;
+        mCenterX = getWidth() / 2;
+        mCenterY = getHeight() / 2;
+        mDotRadius = mSin_1 * mOuterRadius / (1 + mSin_1);
+
+        mBitmap = Bitmap.createBitmap(mOuterRadius * 2, mOuterRadius * 2, Bitmap.Config.ARGB_8888);
+        mCanvas = new Canvas(mBitmap);
+        mSweepGradient = new SweepGradient(mOuterRadius, mOuterRadius, mColors, null);
+        Matrix matrix = new Matrix();
+        matrix.postRotate(-90, mOuterRadius, mOuterRadius);
+        mSweepGradient.setLocalMatrix(matrix);
     }
 
     @Override
@@ -78,19 +89,19 @@ public class CircleProgress extends View {
         //对Wrap_content的情况做处理（系统默认只有match_parent的效果）
         setMeasuredDimension(measureValue(widthMeasureSpec), measureValue(heightMeasureSpec));
 
-        if (getWidth() > 0) {
-            mOuterRadius = Math.min(getWidth(), getHeight()) / 2;
-            mCenterX = getWidth() / 2;
-            mCenterY = getHeight() / 2;
-            mDotRadius = mSin_1 * mOuterRadius / (1 + mSin_1);
-
-            mBitmap = Bitmap.createBitmap(mOuterRadius * 2, mOuterRadius * 2, Bitmap.Config.ARGB_8888);
-            mCanvas = new Canvas(mBitmap);
-            mSweepGradient = new SweepGradient(mOuterRadius, mOuterRadius, mColors, null);
-            Matrix matrix = new Matrix();
-            matrix.postRotate(-90, mOuterRadius, mOuterRadius);
-            mSweepGradient.setLocalMatrix(matrix);
-        }
+//        if (getWidth() > 0) {
+//            mOuterRadius = Math.min(getWidth(), getHeight()) / 2;
+//            mCenterX = getWidth() / 2;
+//            mCenterY = getHeight() / 2;
+//            mDotRadius = mSin_1 * mOuterRadius / (1 + mSin_1);
+//
+//            mBitmap = Bitmap.createBitmap(mOuterRadius * 2, mOuterRadius * 2, Bitmap.Config.ARGB_8888);
+//            mCanvas = new Canvas(mBitmap);
+//            mSweepGradient = new SweepGradient(mOuterRadius, mOuterRadius, mColors, null);
+//            Matrix matrix = new Matrix();
+//            matrix.postRotate(-90, mOuterRadius, mOuterRadius);
+//            mSweepGradient.setLocalMatrix(matrix);
+//        }
     }
 
     private int measureValue(int measureSpec) {

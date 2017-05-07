@@ -6,8 +6,6 @@ import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
-import android.graphics.BitmapFactory;
-import android.graphics.BitmapRegionDecoder;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -20,19 +18,22 @@ import android.view.animation.BounceInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.lijian.myapplication.R;
 import com.example.lijian.myapplication.custom.AddWidthPropertyButton;
 import com.example.lijian.myapplication.custom.PropertyTextView;
+import com.example.lijian.myapplication.custom.RectangleToCircleButton;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by LIJIAN on 2017/3/22.
  */
 
-public class PropertyAnimationTestActivity extends AppCompatActivity implements View.OnClickListener,GestureDetector.OnGestureListener {
+public class PropertyAnimationTestActivity extends AppCompatActivity implements View.OnClickListener, GestureDetector.OnGestureListener {
     Button mButton_number, mButton_color, mButton_together, mButton_translation, mButton_background, mButton_ball;
     AddWidthPropertyButton mButton_width;
     PropertyTextView mTextView;
@@ -41,6 +42,8 @@ public class PropertyAnimationTestActivity extends AppCompatActivity implements 
     ImageView ivTop;
     @BindView(R.id.iv_bottom)
     ImageView ivBottom;
+    @BindView(R.id.mBt_r2c)
+    RectangleToCircleButton mBtR2c;
 
     private GestureDetector mGstureDetector;
 
@@ -65,7 +68,7 @@ public class PropertyAnimationTestActivity extends AppCompatActivity implements 
         mTextView = (PropertyTextView) findViewById(R.id.textView);
         mIv_ball = (ImageView) findViewById(R.id.iv_ball);
 
-        mGstureDetector = new GestureDetector(this,this);
+        mGstureDetector = new GestureDetector(this, this);
         mStartColor = getResources().getColor(R.color.colorPrimary);
         mEndColor = getResources().getColor(R.color.colorAccent);
 //        final ValueAnimator animator = getNumberAnimator();
@@ -251,5 +254,10 @@ public class PropertyAnimationTestActivity extends AppCompatActivity implements 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
         return false;
+    }
+
+    @OnClick(R.id.mBt_r2c)
+    public void onViewClicked() {
+        mBtR2c.startAnimation();
     }
 }

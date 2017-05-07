@@ -9,10 +9,7 @@ import android.widget.Toast;
 
 import com.example.lijian.myapplication.bean.DownloadInfo;
 
-import org.greenrobot.eventbus.EventBus;
-
 import java.io.File;
-import java.io.InterruptedIOException;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;

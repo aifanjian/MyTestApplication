@@ -16,7 +16,7 @@ import java.util.concurrent.Executors;
 public class MainActivity extends AppCompatActivity {
 
     ListView mListView;
-    private String[] mItemNames = {"属性动画测试", "JNI调用测试", "圆形进度测试", "下载管理测试"};
+    private String[] mItemNames = {"属性动画测试", "JNI调用测试", "圆形进度测试", "下载管理测试","动态权限测试"};
     private Context mContext;
 
     @Override
@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 3:
                         startActivity(new Intent(mContext, DownloadActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(mContext, PermissionActivity.class));
                         break;
                 }
             }

@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name ="CircleProgress">
+    <declare-styleable name="CircleProgress">
         <attr name="backgroundColor" format="color"/>
         <attr name="foregroundColor" format="color"/>
     </declare-styleable>
+
     <declare-styleable name="WithNumberProgressBar">
         <attr name="primaryProgressColor" format="color"/>
         <attr name="secondProgressColor" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="RectangleToCircleButton">
+        <attr name="backgroundColor"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="android:text" />
+        <attr name="customViewStyle" format="reference"/>
+    </declare-styleable>
+
 </resources>

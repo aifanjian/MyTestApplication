@@ -6,6 +6,27 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="customViewStyle">@style/RectangleToCircleButtonStyle14</item>
+    </style>
+
+    <style name="RectangleToCircleButtonStyle18">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="backgroundColor">@color/colorPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="RectangleToCircleButtonStyle12">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="backgroundColor">@color/colorPrimary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">"完成"</item>
+    </style>
+
+    <style name="RectangleToCircleButtonStyle14">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="backgroundColor">@color/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">"完成"</item>
     </style>
 
 </resources>
